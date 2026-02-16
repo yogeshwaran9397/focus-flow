@@ -34,7 +34,7 @@ const Dashboard = () => {
         : "0%",
       icon: "📊",
       color: "#8b5cf6"
-    }
+    }    
   ];
 
   return (

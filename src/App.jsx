@@ -12,7 +12,7 @@ const ProtectedRoute = (prop) => {
     if (!isAuthenticated) {
         return <Navigate to="/login" replace />;
     }
-    
+
     return prop.children;
 };
 
@@ -28,13 +28,11 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
-                <Route
-                    path="/tasks"
-                    element={
-                        <ProtectedRoute>
-                            <Tasks />
-                        </ProtectedRoute>
-                    }
+                <Route path="/tasks" element={
+                    <ProtectedRoute>
+                        <Tasks />
+                    </ProtectedRoute>
+                }
                 />
                 <Route path="/" element={<Navigate to="/dashboard" replace />} />
             </Routes>
